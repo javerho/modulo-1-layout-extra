@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 
 body{
@@ -44,7 +44,10 @@ nav{
     min-width: 200px;
     background-color: rgb(40, 49, 38);
     color: antiquewhite;
-    position: sticky;
+    .menu-container{
+        position: sticky;
+        top: 0;
+    }
     .menu-title{
         font-size: 20px;
         text-align: center;
@@ -53,11 +56,12 @@ nav{
         font-weight: 600;
     }
     ul{
-        background-color: antiquewhite;
+        background-color: rgb(40, 49, 38);
         color:  rgb(40, 49, 38);
         li{
             border: 1px solid  rgb(40, 49, 38);
             padding: 8px;
+            background-color:antiquewhite;
             
         }
     }
@@ -89,9 +93,56 @@ main{
     justify-content: center;
     align-items: center;
     text-align: center;
+    gap: 10px;
 }
 
 footer{
     background-color: antiquewhite;
     padding: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .toolbar{
+        display: none;
+    }
+    .page-title{
+        font-size: 16px;
+    }
+    .menu-title{
+        display: none;
+    }
+    .page-container{
+        flex-direction: column;
+    }
+    nav{
+        position: sticky;
+        top: 0;
+    }
+    ul{
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        padding: 8px;
+    }
+    li{
+        text-align: center;
+        list-style: none;
+        width: 100%;
+    }
+    .card{
+        flex-direction: row;
+        border: none;
+        width: 100%;
+        justify-content: flex-start;
+        gap: 30px;
+        text-align: left;
+        padding: 16px;
+        img{
+            border-radius: 100%;
+        }
+    }
+    .list{
+        gap: 4px;
+        padding: 16px;
+    }
 }
